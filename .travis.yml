@@ -1,0 +1,15 @@
+language: c
+
+jobs:
+  include:
+    - os: windows
+
+
+script: rake
+deploy:
+  provider: releases
+  token: $TOKEN
+  file: mini-$TRAVIS_OS_NAME
+  skip_cleanup: true
+  on:
+    tags: true
