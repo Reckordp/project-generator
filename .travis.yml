@@ -4,7 +4,6 @@ jobs:
   include:
     - os: windows
 
-
 script: rake
 deploy:
   provider: releases
